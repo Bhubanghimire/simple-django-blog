@@ -21,7 +21,12 @@ margin-right: auto;
 .nav-right {
     display: flex;
     padding-top: 2rem;
+    
     }
+
+.nav-right a{
+    text-decoration: none;
+}
     .post-entry {
     margin-bottom: 2rem;
     }

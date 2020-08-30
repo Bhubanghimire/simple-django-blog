@@ -15,22 +15,20 @@
         </div>
         <div class="nav-right">
             <a href="{% url 'post_new' %}">+ New Blog Post</a>
-            {% if user.is_authenticated %}
-                <a href="{% url 'logout' %}"> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; LOGOUT</a>
-           
-            {% endif %}
-
         </div>
     </header>
 
+    {% if user.is_authenticated%}
+        <p>Hi {{user.username}}!<br>successfully login into account.</p>
+
+    {% else %}
+        <p>You are not authenticated</p>
+        <a href="{% url 'login' %}">Log In</a>
+
+    {% endif %}
 
 
-
-    <div>
-        {% block content %}
-        <h1>this is the content of the base</h1>
-        {% endblock content %}
-    </div>
+    <a href="{% url 'home' %}">continue</a>
 </body>
 
 </html>

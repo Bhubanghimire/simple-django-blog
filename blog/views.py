@@ -30,3 +30,7 @@ class BlogDeltView(DeleteView):
     model = post
     template_name = 'post_delete.html'
     success_url = reverse_lazy('home')
+
+class BlogLoggedView(ListView):
+    model=post
+    template_name = 'success.html'
